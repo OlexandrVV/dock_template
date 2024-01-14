@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/css/styles.css">
+	<title>Document</title>
+</head>
+
+<body>
+
+	<main class="main">
+		<div class="container">
+			<div class="main__category">
+				<article class="article__item">
+					<h2 class="article__title title-article">
+						Модуль меню «бургер»
+					</h2>
+					<p>
+						Функціонал реагує на клік на кнопку меню &#8220;бургера&#8221; (елемент з класом icon-menu). При цьому до тега 	 htmlдодається клас <strong>menu-open</strong>, а також спрацьовує блокування прокручування сторінки (функція <strong>bodyLockToggle()</strong>). При повторному натисканні відбуваються зворотні дії.
+					</p>
+
+					<div class="article__body body-article">
+						<h3>Підключення модуля</h3>
+						<ol>
+							<li><strong>[HTML]</strong> Викликати сніпет <strong>menu</strong>, відредагувати під завдання. Важливо, щоб кнопка бургера залишалася з класом <strong>icon-menu</strong>
+							</li>
+							<li><strong>[JS]</strong> У файлі <strong>js/app.js</strong> розкоментувати рядок <strong>flsFunctions.menuInit(); </strong>
+							</li>
+							<li><strong>[SCSS]</strong> У файлі <strong>scss/base.scss</strong> розкоментувати рядок <strong>@import &#8220;base/menu&#8221;;</strong> Корегувати стилі меню та іконки бургеру у файлі <strong>scss/base/menu.scss</strong>
+							</li>
+						</ol>
+
+						<h3 class="wp-block-heading">Розташування та додаткові дані</h3>						
+						<p>Функціонал знаходиться у <strong>js/files/functions.js</strong>. Назва функціі <strong>menuInit()</strong>,
+							додаткові функції <strong>menuOpen()</strong> і <strong>menuClose()</strong> для відкриття/закриття меню із довільного коду. Усі функції, що імпортуються.
+						</p>
+					</div>
+				</article>
+			</div>
+		</div>
+	</main>
+
+</body>
+
+</html>

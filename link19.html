@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/css/styles.css">
+	<title>Document</title>
+</head>
+
+<body>
+
+	<main class="main">
+		<div class="container">
+			<div class="main__category">
+				<article class="article__item">
+					<h2 class="article__title title-article">
+						Модуль слайдеру “Swiper”
+					</h2>
+
+					<div class="article__body body-article">
+
+						<p>
+							<strong>[HTML]</strong> Існує два сніпети для побудови HTML-структури слайдера:
+						</p>
+						<ol>
+							<li>
+								<strong>swiper </strong>– будує мінімальну структуру з уже доданими класами слайдера (для
+								досвідченіших)
+							</li>
+							<li>
+								<strong>swiperfull </strong>- будує повну структуру слайдера з додаванням всіх можливих елементів
+								керування (кнопки “ліворуч/праворуч”, скролл, пагінація (булети)) з уже доданими класами
+								слайдера. Весь код супроводжується коментарями (для новачків).
+							</li>
+						</ol>
+						<p>
+							<strong>[JS]</strong> У файлі <strong>js/app.js</strong> розкоментувати рядок <strong>import
+								&#8220;./files/sliders.js&#8221;;</strong>
+						</p>
+						<p>
+							У файлі <strong>js/files/sliders.js</strong> виконується підключення самого слайдера
+							&#8220;Swiper&#8221; з пакета NPM (підключено за замовчуванням)
+						</p>
+						<img src="img/Screenshot_65.png" alt="">
+						<p>
+							При необхідності можна підключити більше потрібних модулів:
+						</p>
+						<img src="img/Screenshot_66.png" alt="">
+						<p>
+							Повний перелік модулів &#8211; <a rel="noreferrer noopener" href="https://swiperjs.com/swiper-api#using-js-modules" target="_blank">тут</a> 
+						</p>
+						<p>
+							Також, нижче за кодом, є приклад-підготовка для створення конкретного слайдера (функція initSliders();) Тут ми створюємо та налаштовуємо потрібні нам слайдери, не забуваємо вказувати модулі для конкретного слайдера
+						</p>
+						<img src="img/Screenshot_67.png" alt="">
+						<blockquote>
+							<p>
+								Інформацію з налаштування дивись у <a href="https://swiperjs.com/swiper-api" data-type="URL" data-id="https://swiperjs.com/swiper-api" target="_blank" rel="noreferrer noopener">документаціі</a> на сайті слайдера.
+							</p>
+						</blockquote>
+						<p>
+							Ініціалізація слайдера(ів) <strong>initSliders()</strong>; відбувається після повного завантаження сторінки нижче за кодом:
+						</p>
+						<img src="img/Screenshot_68.png" alt="">
+						<p>
+							<strong>[SCSS]</strong> За замовчуванням, у файлі<strong> js/files/sliders.js</strong> підключені базові, мінімально необхідні для роботи стилі слайдера<strong> import &#8220;../../scss/base/swiper.scss&#8221;;</strong> (Для більш досвідчених). Також є можливість підключити (розкоментувавши рядок) повні стилі слайдера із файлу <strong>scss/libs/swiper.scss</strong> або з пакета <strong>import &#8216;swiper/css&#8217;; </strong>(для початківців)
+						</p>
+
+					</div>
+				</article>
+			</div>
+		</div>
+	</main>
+
+</body>
+
+</html>

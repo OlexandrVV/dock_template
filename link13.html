@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/css/styles.css">
+	<title>Document</title>
+</head>
+
+<body>
+
+	<main class="main">
+		<div class="container">
+			<div class="main__category">
+				<article class="article__item">
+					<h2 class="article__title title-article">
+						Модуль додавання класів до шапки під час прокручування сторінки
+					</h2>
+					<p>
+						Функціонал дозволяє додавати клас до тега header з класом header при прокручуванні сторінки вниз, а також інший клас при зупинці прокручування. Таким чином, можна досягти ефекту, коли при самому скроллі вниз шапку не видно, але варто зупинити скролл, як шапка плавно з’являється вгорі сторінки (стає фіксованою). При зворотному прокручуванні вгору шапка залишається видно.
+					</p>
+					<p>
+						Клас <strong>_header-scroll</strong> додається до шапки при скролі вниз (через вказану кількість пікселів).
+						При зупинці скролла додається клас <strong>_header-show.</strong>
+					</p>
+
+					<div class="article__body body-article">
+
+						<h4>Підключення функціоналу</h4>
+						<p>
+							<strong>[JS]</strong> У файлі <>js/app.js</> розкоментувати рядок <strong>flsScroll.headerScroll();</strong>
+						</p>
+
+						<h3>Використання функціоналу</h3>
+						<p>
+							<strong>[HTML]</strong> До тегу header, додаємо HTML-атрибут <strong>data-scroll</strong>, у значенні атрибуту вказуємо через яку кількість прокручених вниз пікселів нам необхідно додати клас до header (зазвичай за висотою шапки, за замовчуванням 1px).
+						</p>
+						<img src="img/Screenshot_39.png" alt="">
+						<p>
+							Тепер як тільки користувач прокрутить вниз зазначені вище 120px до header додасться технічний клас <strong>_header-scroll</strong>. Цей клас буде присутній до тих пір, поки користувач не повернеться вгору (не доходячи до 120px).
+						</p>
+						<p>
+							Результат роботи:
+						</p>
+						<img src="img/Screenshot_40.png" alt="">
+						<p>
+							<strong>[HTML]</strong> Далі до тегу header додаємо ще один HTML-атрибут <strong>data-scroll-show</strong>. Як тільки користувач зупинить прокручування до тега header, через певний час додасться ще один технічний клас <strong>_header-show</strong>. Цей клас зникає тільки в момент прокручування вниз. При прокручуванні вгору клас не зникає.
+						</p>
+						<p>
+							Результат роботи:
+						</p>
+						<img src="img/Screenshot_41.png" alt="">
+						<p>
+							Можна змінити час затримки додавання класу <strong>_header-show</strong>. Для цього слід вказати значення атрибуту <strong>data-scroll-show</strong> у мілісекундах (за замовчуванням 500)
+						</p>
+						<img src="img/Screenshot_42.png" alt="">
+						<p>
+							<strong>[SCSS] </strong>Тепер залишилося редагувати властивості цих підключених класів у scss. Наприклад:
+						</p>
+						<img src="img/Screenshot_43.png" alt="">
+
+						<h3>Розташування та додаткові дані</h3>
+						<p>
+							Функціонал знаходиться в <strong>js/files/scroll/scroll.js</strong>. Назва функціі <strong>headerScroll()</strong>
+						</p>
+
+					</div>
+				</article>
+			</div>
+		</div>
+	</main>
+
+</body>
+
+</html>
