@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -81,3 +82,88 @@
 </body>
 
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/styles.css">
+	<title>Document</title>
+</head>
+
+<body>
+
+	<main class="main">
+		<div class="container">
+			<div class="main__category">
+				<article class="article__item">
+					<h2 class="article__title title-article">
+						Модуль “Спостерігач” за появою елементів під час прокручування сторінки (скролі)
+					</h2>
+					<p>
+						Модуль “Спостерігач” можна використовувати для вирішення різних завдань: анімація елементів при
+						скролі, підсвічування активного пункту меню (використовується в модулі “Прокручування до потрібного
+						блоку”) та багатьох інших.
+					</p>
+					<p>
+						Суть роботи спостерігача полягає в додаванні класу<strong> _watcher-view</strong> елементу в момент
+						його появи у в’юпорті (екрані) при скролі та при відкритті сторінки. І, відповідно, прибраний при
+						відході об’єкта з в’юпорту.
+					</p>
+
+					<div class="article__body body-article">
+
+						<h3>Підключення модуля</h3>
+						<p>
+							<strong>[HTML]</strong>Для об’єкта, за яким потрібно встановити спостереження, слід додати
+							атрибут<strong>data-watch</strong>
+							<img src="img/Screenshot_44.png" alt="">
+						</p>
+						<p>
+							<strong>[JS]</strong> У файлі <strong>js/app.js</strong> розкоментувати рядок <strong>import
+								&#8216;./libs/watcher.js&#8217;</strong>
+						</p>
+
+						<h4>Додаткові налаштування:</h4>
+						<ul>
+							<li><strong>data-watch-root=&#8217;селектор&#8217;</strong> &#8211; селектор батька всередині якого
+								спостерігатиме за об&#8217;єктом. За замовчуванням &lt;body></li>
+							<li><strong>data-watch-margin=&#8217;значення&#8217; </strong>&#8211; відступ від батька. Вказуємо
+								значення у PX або у %</li>
+							<li><strong>data-watch-threshold=&#8217;значення&#8217;</strong> &#8211; відсоток показу
+								об&#8217;єкта для спрацьовування. Де 1 = 100% показ об&#8217;єкта. Вказуємо лише цілі чи
+								десяткові числа, за замовчуванням 0. Може містити масив значень через кому.</li>
+							<li><strong>data-watch-once</strong> &#8211; спостерігати лише один раз. Тобто клас до
+								об&#8217;єкта додасться тільки один раз і не буде прибраний при виході з в&#8217;юпорту.</li>
+						</ul>
+						<p>
+							<i>Приклад &#8211; клас додасться лише один раз, з появою об&#8217;єкта на 50% його висоти:</i>
+						</p>
+						<img src="img/Screenshot_45.png" alt="">
+
+						<h4>Події</h4>
+						<p>
+							Після кожного спрацювання спостерігача виникає подія <strong>watcherСallback</strong>, його можна відловити в будь-якій частині коду:
+						</p>
+						<img src="img/Screenshot_46.png" alt="">
+
+						<h3>Розташування та додаткові дані</h3>
+						<p>
+							Функціонал міститься у файлі <strong>js/libs/watcher.js</strong>. Назва класу <strong>ScrollWatcher</strong>. Модуль побудований на основі <a href="https://developer.mozilla.org/ru/docs/Web/API/Intersection_Observer_API"><strong>Intersection Observer API.</strong></a>
+						</p>
+						<p>
+							Модуль забезпечений системою FLS і повідомлятиме про свої дії в консоль браузера
+						</p>
+
+					</div>
+				</article>
+			</div>
+		</div>
+	</main>
+
+</body>
+
+</html>
+>>>>>>> 4127f852678cc30aebb03d9a35c84494263443bc

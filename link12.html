@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -109,3 +110,116 @@
 </body>
 
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/styles.css">
+	<title>Document</title>
+</head>
+
+<body>
+
+	<main class="main">
+		<div class="container">
+			<div class="main__category">
+				<article class="article__item">
+					<h2 class="article__title title-article">
+						Модуль “Прокручування до потрібного блоку”. Плавна навігація по сторінці.
+					</h2>
+					<p>
+						У цьому модулі реалізований плавний скролл після натискання на посилання (кнопці) до потрібного блоку
+						на сторінці. Якщо у адресі сторінки буде передано хеш і блок з таким селектором буде знайдено на
+						сторінці, прокручування до блоку відбудеться автоматично. Також модуль дозволяє побудувати навігацію
+						по сторінці з додаванням класу поточному пункту навігації (пункту меню) при скроллі до певного блоку.
+					</p>
+
+					<div class="article__body body-article">
+
+						<h3>Підключення функціоналу</h3>
+						<p><strong>[JS]</strong> У файлі <strong>js/app.js</strong> розкоментувати рядок
+							<strong>flsScroll.pageNavigation();</strong></p>
+
+						<h3></h3>
+						<p>
+							<strong>[HTML]</strong>До елементів навігації (пунктів меню), або до довільного об’єкта, додаємо
+							HTML-атрибут <strong>data-goto</strong>, а в якості значення вказуємо CSS селектор блоку до якого
+							потрібно прокрутити:
+						</p>
+						<img src="img/Screenshot_32.png" alt="">
+						<p>
+							Якщо потрібно, щоб скролл враховував шапку (не докручував на висоту шапки, використовується при
+							фіксованих шапках) потрібно додати до об’єкта навігації атрибут <strong>data-goto-header:</strong>
+						</p>
+						<img src="img/Screenshot_33.png" alt="">
+						<p>
+							Якщо потрібно, щоб скролл не докручував до блоку на вказану висоту, необхідно додати до об’єкта
+							навігації атрибут <strong>data-goto-top</strong>, а в якості значення вказати число – необхідну
+							висоту:
+						</p>
+						<img src="img/Screenshot_34.png" alt="">
+						<p>
+							<strong>data-goto-top</strong> можна поєднувати з data-goto-header, тоді значення
+							<strong>data-goto-top</strong> додасться до висоти шапки.
+						</p>
+
+						<h4>Додавання класу до поточного пункту навігації</h4>
+						<p>
+							Для включення функціоналу додавання класу підключаємо модуль спостерігача:
+						</p>
+						<p>
+							<strong>[JS]</strong> У файлі <strong>js/app.js</strong> розкоментувати рядок <strong>import
+								&#8216;./libs/watcher.js&#8217;</strong><br><strong>[HTML]</strong> Для блоків до яких
+							прокручується сторінка додаємо атрибут <strong>data-watch</strong> зі значенням
+							<strong>navigator</strong>:
+						</p>
+						<img src="img/Screenshot_35.png" alt="">
+						<p>
+							Після цього, при прокручуванні до хмари (об’єкту) навігації, до відповідного пункту навігації буде
+							додано клас <strong>_navigator-active</strong>
+						</p>
+
+						<h4>Прокручування до потрібного блоку по хешу (при відкритті сторінки)</h4>
+						<p>
+							Для того щоб прокрутити сторінку до потрібного блоку при відкритті сторінки необхідно додати до
+							адреси хеш, що містить <strong>ім’я класу потрібного блоку.</strong>
+						</p>
+						<i>Приклад адресного рядка та потрібного блоку:</i>
+						<img src="img/Screenshot_36.png" alt="">
+						<img src="img/Screenshot_37.png" alt="">
+
+						<h4>Додавання функціоналу, плавне прокручування на iOS</h4>
+						<p>
+							За промовчанням, прокручування виконується методом scrollTo() з параметром behavior:
+							&#8220;smooth&#8221; без застосування додаткових плагінів. Але це обмежує функціонал цього модуля
+							&#8211; не можна вказати швидкість прокручування, а також можуть виникнути проблеми в <a
+							href="https://caniuse.com/?search=scrollTo" target="_blank" rel="noreferrer noopener">деяких
+							версіях браузерів на iOS</a>. Для вирішення всіх проблем можна підключити додатковий плагін
+							SmoothScroll, зробити це можна у файлі <strong>js/files/scroll/gotoblock.js</strong>
+							розкоментувавши рядок <strong>import SmoothScroll from &#8216;smooth-scroll&#8217;;
+							</strong>подальше перемикання прокручування на плагін відбудеться автоматично.
+						</p>
+						<p>
+							При роботі з плагіном з&#8217;являється можливість вказати швидкість прокручування, для цього
+							елементу навігації потрібно додати атрибут <strong>data-goto-speed</strong> і вказати число, що
+							означає кількість мілісекунд за які прокручується (1000 = 1 секунда), за замовчуванням 500.
+						</p>
+						<img src="img/Screenshot_38.png" alt="">
+
+						<h3>Розташування та додаткові дані</h3>
+						<p>
+							Функціонал знаходиться у <strong>js/files/scroll/scroll.js</strong>. Назва функціі <strong>pageNavigation()</strong>. Допоміжний модуль прокручування <strong>gotoblock</strong> знаходиться у <strong>js/files/scroll/gotoblock.js</strong>. Модуль спостерігача знаходиться у файлі <strong>js/libs/watcher.js</strong>. 
+						</p>
+					</div>
+				</article>
+			</div>
+		</div>
+	</main>
+
+</body>
+
+</html>
+>>>>>>> 4127f852678cc30aebb03d9a35c84494263443bc
