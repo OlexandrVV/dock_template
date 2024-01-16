@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/styles.css">
+	<title>Document</title>
+</head>
+
+<body>
+
+	<main class="main">
+		<div class="container">
+			<div class="main__category">
+				<article class="article__item">
+					<h2 class="article__title title-article">
+						Модуль “Календар” (js-datepicker)
+					</h2>
+					<p>
+						Функціонал дозволяє виводити календар для поля введення (input).
+					</p>
+
+					<div class="article__body body-article">
+
+						<h3>Підключення функціоналу</h3>
+						<p>
+							<strong>[JS]</strong> У файлі <strong>js/app.js</strong> розкоментувати рядок <strong>import &#8216;./files/forms/datepicker.js&#8217;</strong><br>
+							<strong>[SCSS]</strong> Розкоментувати рядок <strong>@import «datepicker»;</strong> у файлі <strong>src/scss/base/forms/forms.scss</strong> — це підключить базові стилі календаря. Відредагувати стилі під свої потреби можна у файлі <strong>src/scss/base/forms/datepicker.scss</strong>
+						</p>
+
+						<h3>Використання модуля</h3>
+						<p>
+							<strong>[HTML]</strong> До тегу &lt;input> додаємо HTML-атрибут <strong>data-datepicker</strong>. 
+						</p>
+						<img src="img/Screenshot_83.png" alt="">
+
+						<h3>Налаштування та функціонал модуля</h3>
+						<p>
+							алаштування модуля можна змінювати у файлі <strong>src/js/files/forms/datepicker.js</strong>. Документація плагіна 
+							<a rel="noreferrer noopener" href="https://www.npmjs.com/package/js-datepicker" target="_blank">https://www.npmjs.com/package/js-datepicker</a>
+						</p>
+
+					</div>
+				</article>
+			</div>
+		</div>
+	</main>
+
+</body>
+
+</html>

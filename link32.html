@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/styles.css">
+	<title>Document</title>
+</head>
+
+<body>
+
+	<main class="main">
+		<div class="container">
+			<div class="main__category">
+				<article class="article__item">
+					<h2 class="article__title title-article">
+						Модуль “Custom Cursor”
+					</h2>
+					<p>
+						Модуль змінює звичайний курсор миші на стилізований
+					</p>
+
+					<div class="article__body body-article">
+
+						<h3>Підключення</h3>
+						<p>
+							<strong>[JS]</strong> у файлі <strong>src/js/app.js</strong> розкоментуйте рядок
+							<strong>flsFunctions.customCursor(true);</strong> (Параметр <strong>true</strong> вмикає подвійний
+							курсор. Якщо це не потрібно передавайте <strong>false</strong>)
+						</p>	
+						<p>
+							<strong>[SCSS]</strong> В файлі <strong>src/scss/base.scss</strong> розкоментуйте рядок
+							<strong>@import &#8220;base/cursor&#8221;;</strong>
+						</p>
+						<p>
+							У файлі <strong>src/scss/base/cursor.scss</strong> можна змінювати стіль курсору за потреби
+						</p>
+						
+					</div>
+				</article>
+			</div>
+		</div>
+	</main>
+
+</body>
+
+</html>

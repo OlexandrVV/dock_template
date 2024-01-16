@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/styles.css">
+	<title>Document</title>
+</head>
+
+<body>
+
+	<main class="main">
+		<div class="container">
+			<div class="main__category">
+				<article class="article__item">
+					<h2 class="article__title title-article">
+						Модуль форми «Кількість»
+					</h2>
+					<p>
+						Модуль є готовим блоком для вибору кількості (наприклад товару в інтернет-магазині).
+					</p>
+
+					<div class="article__body body-article">
+
+						<h3>Підключення модуля</h3>
+						<p>
+							<strong>[HTML]</strong> У потрібному місці викликати <a rel="noreferrer noopener"
+								href="link2.html#snippets" target="_blank">сніпет</a>
+							<strong> quantity</strong>. Буде побудовано структуру модуля з кнопками та полем введення. Класи та
+							структуру можна міняти під свої потреби. В атрибуті <strong>value </strong>значення вказуємо
+							початкове значення кількості.
+						</p>
+						<img src="img/Screenshot_84.png" alt="">
+						<p>
+							<strong><strong>[SCSS]</strong> </strong>(не обов&#8217;язково) Якщо ви хочете одразу подивитися на
+							роботу блоку та залишили класи запропоновані сніпетом, ви можете розкоментувати рядок
+							<strong>@import &#8220;quantity&#8221;;</strong> у файлі
+							<strong>src/scss/base/forms/<strong>forms</strong>.scss</strong> — це підключить базові стилі, їх
+							можна відредагувати під свої потреби.
+						</p>
+						<p>
+							<strong>[JS]</strong> У файлі <strong>js/app.js</strong> розкоментувати рядок
+							<strong>flsForms.formQuantity();</strong>
+						</p>
+
+						<h4>Додаткові параметри</h4>
+						<p>
+							До елементу  &lt;INPUT> можна додати додаткові настройки:
+						</p>
+						<ul>
+							<li><strong>data-quantity-max=’число’</strong> встановить максимальне значення поля
+							</li>
+							<li><strong>data-quantity-min=’число’</strong>встановить мінімальне значення поля
+							</li>
+						</ul>
+
+
+
+					</div>
+				</article>
+			</div>
+		</div>
+	</main>
+
+</body>
+
+</html>

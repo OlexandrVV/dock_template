@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/styles.css">
+	<title>Document</title>
+</head>
+
+<body>
+
+	<main class="main">
+		<div class="container">
+			<div class="main__category">
+				<article class="article__item">
+					<h2 class="article__title title-article">
+						Модуль кастомізації елемента SELECT
+					</h2>
+					<p>
+						Модуль дозволяє як завгодно стилізувати стандартний елемент форми SELECT та його пункти OPTION, а також реалізує додаткові можливості.
+					</p>
+
+					<div class="article__body body-article">
+
+						<h3>Підключення модуля</h3>
+						<p>
+							<strong>[HTML]</strong> У потрібному місці викликати <a rel="noreferrer noopener" href="link2.html#snippets" target="_blank">сніпет</a> <strong>sel</strong>, редагувати HTML-код селекту під свої потреби<br>
+							<strong>[SCSS]</strong> Розкоментувати рядок <strong>@import &#8220;select&#8221;;</strong> у файлі <strong>src/scss/base/forms/forms.scss</strong> &#8211; це підключить базові стилі селекту, відредагувати під свої потреби<br>
+							<strong>[JS]</strong> Розкоментувати рядок <strong>import &#8216;./libs/select.js&#8217;</strong> у файлі <strong>js/app.js</strong>
+						</p>
+
+						<h3>Налаштування та функціонал модуля</h3>
+						<p>
+							Для підключення того чи іншого функціоналу модуля використовуються різні HTML-атрибути
+						</p>
+
+						<h3>Атрибути для тегу &lt;SELECT>:</h3>
+						<ol>
+							<li><strong>multiple </strong>мультивибір</li>
+							<li><strong>disabled </strong>недоступний</li>
+							<li><strong>data-class-modif=ім’я класса </strong>– модифікатор до конкретного селекту. У результаті вийде select select_ім’я класу</li>
+							<li><strong>data-tags </strong> – режим тегів (тільки для multiple) дозволяє вставляти вибрані значення у вигляді тегів з хрестиком для видалення. Також є можливість виводити ці теги в будь-якому зазначеному місці, вказавши селектор блоку як значення атрибуту</li>
+							<li><strong>data-scroll </strong>включить прокрутку для списку, додатково можна підключити кастомний скролл simplebar в js/app.js. Зазначене число для атрибуту обмежить висоту контейнера випадаючого списку</li>
+							<li><strong>data-checkbox</strong>(в роботі) – стилізація елементів по checkbox (тільки для multiple)</li>
+							<li><strong>data-show-selected </strong> – вимикає приховування вибраного елемента</li>
+							<li><strong>data-search </strong> – дозволяє шукати за списком</li>
+							<li><strong>data-speed </strong> – дозволяє вказати швидкість відкриття/закриття списку в мілісекундах за замовчуванням 150</li>
+							<li><strong>data-open </strong>– селект відкритий відразу</li>
+							<li><strong>data-submit </strong>– відправляє форму при зміні селекту</li>
+							<li><strong>data-pseudo-label=заголовок</strong> – додає псевдоелемент до заголовка селекту із зазначеним текстом, а також клас <strong>_select-pseudo-label</strong></li>
+						</ol>
+
+						<h3>Атрибути для тегу &lt;OPTION>:</h3>
+						<ol>
+							<li><strong>data-class=ім’я класса</strong>– додає клас</li>
+							<li><strong>data-asset=шлях до зображень чи тексту</strong>– додає в елемент списку структуру двох колонок із зазначеними даними</li>
+							<li><strong>data-href=адрес посилання</strong> – додає посилання до елементу списку</li>
+							<li><strong>data-href-blank </strong>– відкриє посилання у новому вікні</li>
+						</ol>
+
+					 	<h4>Атрибути для плейсхолдера (плейсхолдер – це  &lt;OPTION> з порожнім value)</h4>
+						<ol>
+							<li>
+								<strong>data-label</strong>– додає label до селекту
+							</li>
+							<li>
+								<strong>data-show</strong> – показує плейсхолдер у списку (тільки для одиничного вибору)
+							</li>
+						</ol>
+
+						<h4>Атрибути для інших елементів</h4>
+						<ol>
+							<li><strong>data-one-select </strong>селекти всередині об’єкта з цим атрибутом будуть відкриватися лише по одному. Тобто при відкритті селекту інший відкритий селект закривається.</li>
+						</ol>
+
+						<h3>Пример селекта с некоторыми атрибутами</h3>
+						<img src="img/Screenshot_78.png" alt="">
+
+						<h3>Класи, які формуються модулем</h3>
+						<ol>
+							<li>select – Головний блок</li>
+							<li>select__body – Тіло селекту</li>
+							<li>select__title – Заголовок</li>
+							<li>select__value – Значення у заголовку</li>
+							<li>select__label – Лейбл</li>
+							<li>select__input – Поле вводу</li>
+							<li>select__text – Оболонка текстових даних</li>
+							<li>select__link – Посилання в елементі</li>
+							<li>select__options – Випадаючий список</li>
+							<li>select__scroll – Оболонка при скролі</li>
+							<li>select__option – Пункт</li>
+							<li>select__content – Оболонка контенту в заголовку</li>
+							<li>select__row – Ряд</li>
+							<li>select__asset – Додаткові дані</li>
+							<li>_select-disabled – Заборонено</li>
+							<li>_select-tag – Клас тега</li>
+							<li>_select-open – Список відкритий</li>
+							<li>_select-active – Список обраний</li>
+							<li>_select-focus – Список у фокусі</li>
+							<li>_select-multiple – Мультивибір</li>
+							<li>_select-checkbox – Стиль чекбоксу</li>
+							<li>_select-selected – Вибраний пункт</li>
+							<li>_select-pseudo-label – Псевдолейбл для заголовка селекту</li>
+						</ol>
+
+						<h4>Події</h4>
+						<p>
+							Після кожного вибору елементи селекту спрацьовує подію <strong>selectCallback</strong>, її можна відловити в будь-якій частині коду:
+						</p>
+						<img src="img/Screenshot_79.png" alt="">
+
+						<h3>Розташування та додаткові дані</h3>
+						<p>
+							Клас <strong>SelectConstructor  </strong>знаходяться у файлі<strong> js/libs/select.js</strong>
+						</p>
+
+					</div>
+				</article>
+			</div>
+		</div>
+	</main>
+
+</body>
+
+</html>

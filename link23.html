@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/styles.css">
+	<title>Document</title>
+</head>
+
+<body>
+
+	<main class="main">
+		<div class="container">
+			<div class="main__category">
+				<article class="article__item">
+					<h2 class="article__title title-article">
+						Модуль анімації (паралакс) об’єктів під час руху миші
+					</h2>
+					<p>
+						Розкішний модуль для створення інтерактивної анімації на вашій сторінці. Різні об’єкти можуть плавно пересуватися, реагуючи на переміщення курсору миші.
+					</p>
+
+					<div class="article__body body-article">
+
+						<h3>Підключення функціоналу</h3>
+						<p>
+							<strong>[HTML]</strong> До об’єкта, який слід анімувати, необхідно додати атрибут <strong>data-prlx-mouse</strong>
+						</p>
+						<img src="img/Screenshot_82.png" alt="">
+						<p>
+							<strong>[JS]</strong> У файлі <strong>js/app.js</strong> розкоментувати рядок <strong>import &#8216;./libs/parallax-mouse.js&#8217;</strong>
+						</p>
+
+						<h3>Додаткові налаштування</h3>
+						<ol>
+							<li><strong>data-prlx-cx=коефіцієнт_х</strong> (значення за замовчуванням 100) – керування відсотком зсуву по осі X
+							</li>
+							<li><strong>data-prlx-cy=коефіцієнт_y</strong> (значення за замовчуванням 100) – керування відсотком зсуву по осі Y
+							</li>
+							<li><strong>data-prlx-a=швидкість анімації</strong> (значення за замовчуванням 50) – керування швидкістю анімації
+							</li>
+							<li><strong>data-prlx-dxr</strong>– рух у протилежному напрямку по осі X
+							</li>
+							<li><strong>data-prlx-dxy</strong> – рух у протилежному напрямку по осі Y
+							</li>
+						</ol>
+
+						<h4>Розташування та додаткові дані</h4>
+						<p>
+							Функціонал знаходиться у <strong> js/libs/parallax-mouse.js.</strong>
+						</p>
+
+					</div>
+				</article>
+			</div>
+		</div>
+	</main>
+
+</body>
+
+</html>
