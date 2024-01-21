@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/css/styles.css">
+	<title>Document</title>
+</head>
+
+<body>
+
+	<main class="main">
+		<div class="container">
+			<div class="main__category">
+				<article class="article__item">
+					<h2 class="article__title title-article">
+						Модуль анімації цифрового лічильника
+					</h2>
+
+					<div class="article__body body-article">
+
+						<h3>Підключення модуля</h3>
+						<p>
+							<strong>[HTML]</strong>Пишемо HTML-структуру лічильника(ів), та додаємо атрибут <strong>data-digits-counter</strong> до кожного з них. В середені тегу-лічильника має бути тільки число:
+						</p>
+						<img src="img/Screenshot_90.png" alt="">
+						<p>
+							<strong>[JS]</strong> У файлі <strong>js/app.js</strong> розкоментовуємо рядок <strong>flsScroll.digitsCounter();</strong>
+						</p>
+						<p>
+							<strong>(!)</strong> Модуль потребує підключення <a rel="noreferrer noopener" href="link14.html" target="_blank">модуля спостерігача</a>. Тож треба підключити його та додати атрибут data-watch <strong>батьківському</strong> елементу з лічильниками:
+						</p>
+						<img src="img/Screenshot_91.png" alt="">
+
+						<h3>Додаткові можливості</h3>
+						<h4>Зміна швидкості</h4>
+						<p>
+							Для зміни швидкості анімації необхідно додати атрибут <strong>data-digits-counter-speed</strong> до елементу лічильника та вказати швидкість у мілісекундах (1000 за замовченням)
+						</p>
+						<img src="img/Screenshot_92.png" alt="">
+
+						<h4>Форматування</h4>
+						<p>
+							Існує можливість форматування виводу цифр відділяючи тисячі сотрі тисяч і т.д. Для цього необхідно додати атрибут <strong>data-digits-counter-format</strong> до елементу лічильника. Для налаштування розмежувача можно додати символ у якості значення атрибуту (за замовченням пробіл)
+						</p>
+						<img src="img/Screenshot_93.png" alt="">
+
+					</div>
+				</article>
+			</div>
+		</div>
+	</main>
+
+</body>
+
+</html>

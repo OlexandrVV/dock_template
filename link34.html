@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/css/styles.css">
+	<title>Document</title>
+</head>
+
+<body>
+
+	<main class="main">
+		<div class="container">
+			<div class="main__category">
+				<article class="article__item">
+					<h2 class="article__title title-article">
+						Палітра кольорів
+					</h2>
+					<p>
+						Для чого потрібна палітра кольорів? <br>
+						Палітра кольорів через змінні CSS використовується для зручного керування кольорами у веб-розробці.
+						<br><br>Зазвичай кольори використовуються багаторазово у різних частинах сайту й зміна колірної схеми
+						може вимагати значної кількості змін коду. <br><br>Використання змінних CSS дозволяє визначити кольори
+						в одному місці (наприклад у файлі colors-palette.scss), а потім використовувати ці змінні в різних
+						частинах коду, де потрібно використовувати певний колір.<br><br>Якщо потрібно змінити колірну схему,
+						достатньо змінити значення змінної у розділі colors palette й ця зміна буде автоматично застосована до
+						всього сайту.
+					</p>
+
+					<div class="article__body body-article">
+
+						<h3>Підключення</h3>
+						<p>
+							У файлі <strong>style.scss</strong> розкоментувати рядок <strong>@import
+							&#8220;base/colors-palette&#8221;;</strong>
+						</p>
+
+						<h3>Використання</h3>
+						<p>
+							В файлі <strong>src/scss/base/colors-palette.scss</strong> заповніть змінні відповідними кольорами проєкту. Додайте нові змінні за потреби. Видаліть змінні які не використовуються. 
+						</p>
+						<p>Використовуйте змінні у своєму коді</p>
+
+						<h3>Додаткова зручність</h3>
+						<p>
+							Встановіть плагіни 
+							<a rel="noreferrer noopener" href="https://marketplace.visualstudio.com/items?itemName=kamikillerto.vscode-colorize" target="_blank">colorize</a> та <a rel="noreferrer noopener" href="https://marketplace.visualstudio.com/items?itemName=vunguyentuan.vscode-css-variables" target="_blank">CSS Variable Autocomplete
+							</a> 
+							для зручної роботи з палітрою кольорів.
+						</p>
+						<ul>
+							<li>Colorize &#8211; підсвічує кольори у змінних</li>
+							<li>CSS Variable Autocomplete &#8211; автоматично заповнює змінні
+								оголошені у файлі colors-palette.scss
+							</li>
+						</ul>
+
+					</div>
+				</article>
+			</div>
+		</div>
+	</main>
+
+</body>
+
+</html>

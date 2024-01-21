@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/css/styles.css">
+	<title>Document</title>
+</head>
+
+<body>
+
+	<main class="main">
+		<div class="container">
+			<div class="main__category">
+				<article class="article__item">
+					<h2 class="article__title title-article">
+						Модуль адаптивних зображень “IBG”
+					</h2>
+
+					<div class="article__body body-article">
+
+						<p>
+							Для роботи модуля адаптивних зображень <strong>“IBG”</strong> необхідно додати клас ibg безпосоредньо до зображення, або скористатись сніпетом <strong>ibg:</strong>
+						</p>
+						<img src="img/Screenshot_102.png" alt="">
+						<p>
+							Далі, для налаштування потрібних співвідношень сторін зображення, необхідно додати властивість aspect-ratio до конкретного зображення, в якості значення вказати ширину та висоту через слеш
+						</p>
+						<p>
+							Наприклад якщо розміри зображення в макеті 260px ширина та 180px висота то пишемо:
+						</p>
+						<img src="img/Screenshot_103.png" alt="">
+						<p>
+							За замовченням на зображення діє алгоритм масштабування cover, щоб змініти на contain додайте модифікатор .ibg–contain.
+						</p>
+						<p>
+							Також, якщо треба змінити позиціонування зображення на відмінне від center додайте відповідний модифікотор .ibg–top, .ibg–left, .ibg–bottom, .ibg–right
+						</p>
+						<p>
+							<strong>Примітка</strong>. В більшості випадках зображення не потребує додаткової HTML обгортки, за виключенням ситуацій, коли воно є FLEX-елементом та є потреба в певній поведінці.
+						</p>
+
+
+					</div>
+				</article>
+			</div>
+		</div>
+	</main>
+
+</body>
+
+</html>
